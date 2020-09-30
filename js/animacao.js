@@ -45,8 +45,7 @@ function initAnimacaoScroll() {
                 const isSectionVisible = (sectionTop - windowMetade) < 0;
                 if (isSectionVisible) {
                     section.classList.add('ativo');
-                    console.log('scroll');
-                    console.log(sections);
+                    bar();
                 } else {
                     section.classList.remove('ativo');
                 }
@@ -54,11 +53,17 @@ function initAnimacaoScroll() {
         }
 
         function bar() {
-            const sections = document.querySelectorAll('.barra');
-            sections.length
+            const ativo = document.querySelectorAll('.s .ativo');
+            console.log("ativo");
+            console.log(ativo);
+            var dist = (ativo.length * 60);
+            console.log(dist);
+            const barra = document.querySelector('#mark');
+            var heig = 240 / cont;
+            barra.style.setProperty("height", heig);
+            barra.style.setProperty("top", dist);
         }
         animaScroll();
-
         window.addEventListener('scroll', animaScroll);
     }
 }
