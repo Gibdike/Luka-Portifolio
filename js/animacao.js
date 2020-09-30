@@ -1,5 +1,41 @@
+function insereLi(i) {
+    var newLi = document.createElement('li');
+    var newA = document.createElement('a'); //a tag <a> que faltava
+    var newText = document.createTextNode(i + 1);
+    var position = document.querySelector('#menu-ul');
+    var num = i + 1;
+    var link = "#p" + num.toString();
+    //os atributos do <a>
+    newA.setAttribute("href", link);
+
+    newA.appendChild(newText); //colocar o texto no <a>
+    newLi.appendChild(newA); //e o <a> dentro do <li>
+    position.appendChild(newLi);
+}
+
+function troca() {
+    var position = document.querySelector('#menu-ul');
+    var bar = document.querySelectorAll('.barra');
+    console.log(position);
+    console.log(bar);
+}
+
+
 function initAnimacaoScroll() {
+
     const sections = document.querySelectorAll('.js-scroll');
+    const menu = document.querySelectorAll('.s');
+    const cont = menu.length;
+    console.log(menu);
+    console.log(cont);
+
+    for (var i = 0; i < cont; i++) {
+        insereLi(i);
+        console.log(i);
+    }
+    console.log("teste");
+    console.log(sections);
+
     if (sections.length) {
         const windowMetade = window.innerHeight * 0.5;
 
@@ -7,16 +43,25 @@ function initAnimacaoScroll() {
             sections.forEach((section) => {
                 const sectionTop = section.getBoundingClientRect().top;
                 const isSectionVisible = (sectionTop - windowMetade) < 0;
-                if (isSectionVisible)
+                if (isSectionVisible) {
                     section.classList.add('ativo');
-                else
+                    console.log('scroll');
+                    console.log(sections);
+                } else {
                     section.classList.remove('ativo');
+                }
             })
         }
 
+        function bar() {
+            const sections = document.querySelectorAll('.barra');
+            sections.length
+        }
         animaScroll();
 
         window.addEventListener('scroll', animaScroll);
     }
 }
+
 initAnimacaoScroll();
+troca();
