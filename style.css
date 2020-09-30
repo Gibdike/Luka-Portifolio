@@ -41,7 +41,6 @@ h2 {
     text-align: center;
     font-weight: 300;
     font-size: 24px;
-    margin: 10px;
 }
 
 h3 {
@@ -50,24 +49,29 @@ h3 {
 }
 
 h4 {
-    font-size: 10px;
+    font-size: 20px;
     Line-Height: 15px;
 }
 
-button {
-    position: relative;
-    background: #354147;
-    border-style: none;
-    padding: 20px 40px;
-    width: 50%;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-size: 24px;
-    color: #FFFFFF;
+
+/*-----menu-----*/
+
+.menu {
+    position: fixed;
+    top: 400px;
+    left: 2%;
+}
+
+.menu #mark {
+    position: absolute;
 }
 
 
 /*-----Parte1-----*/
+
+.parte1 {
+    padding-bottom: 75px;
+}
 
 .parte1 .container {
     padding: 10px;
@@ -79,33 +83,43 @@ button {
     width: 100%;
 }
 
-
-/*-----Parte1-----*/
-
-.parte1 .texto1 {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-}
-
 .column {
     display: flex;
     flex-direction: column;
+    justify-items: center;
 }
 
-.row {
+.parte1 h1,
+.parte1 h2 {
+    text-align: left;
+}
+
+.parte1 .texto1 {
+    max-width: 950px;
+    justify-self: center;
+    margin: 450px 0;
+}
+
+.scroll {
+    margin: 25px 0;
+    align-self: left;
     display: flex;
+}
+
+.scroll svg {
+    height: 20px;
+    padding: 0 15px;
 }
 
 
 /*-----Parte2-----*/
 
+.parte2 {
+    padding: 75px 10px;
+}
+
 .parte2 .container {
-    padding: 10px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,24 +135,18 @@ button {
     padding: 50px;
 }
 
-.parte2 buttom {
-    margin: 0 auto;
-}
-
 
 /*-----Parte3-----*/
 
 .parte3 {
-    padding-top: 50px;
+    padding: 75px 0px;
     width: 100%;
 }
 
 .parte3 h2 {
-    padding: 30px 25px;
+    padding-top: 25px;
+    width: 100%;
 }
-
-
-/*-----Gallery-----*/
 
 .gallery {
     padding-top: 50px;
@@ -164,6 +172,7 @@ button {
 }
 
 .gallery h2 {
+    padding: 25px 0;
     text-align: left;
     font-weight: 300;
     font-size: 24px;
@@ -172,6 +181,7 @@ button {
 .text {
     display: flex;
     flex-direction: column;
+    justify-items: left;
     margin: 0 5%;
     max-width: 550px;
 }
@@ -195,6 +205,20 @@ button {
 
 .wpr {
     flex-wrap: wrap-reverse;
+}
+
+
+/*-----JavaScript----*/
+
+.js-scroll {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+    transition: .5s;
+}
+
+.ativo {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 @media screen and (min-width: 500px) {
