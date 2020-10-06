@@ -1,0 +1,246 @@
+/*-----Coisas gerais-----*/
+
+body {
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    outline: none;
+}
+
+.container {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 44px;
+    line-height: 44px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+h3 {
+    Font-size: 15px;
+    text-align: Left;
+}
+
+h4 {
+    font-size: 20px;
+    Line-Height: 15px;
+}
+
+
+/*-----Menu lateral-----*/
+
+.menu_lateral {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.menu_lateral ul {
+    height: 240px;
+    align-self: center;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu_lateral ul li {
+    list-style: none;
+}
+
+.menu_lateral a {
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    color: black;
+}
+
+.menu_lateral .barras {
+    align-self: center;
+    height: 240px;
+    padding-left: 30px;
+    display: flex;
+    position: relative;
+}
+
+.menu_lateral #fundo {
+    top: 0;
+    position: absolute;
+}
+
+.menu_lateral #mark {
+    position: absolute;
+}
+
+
+/*-----parte 1-----*/
+
+.parte1 .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.parte1 .subtitulo {
+    display: flex;
+    padding: 20px;
+}
+
+.parte1 .subtitulo svg {
+    height: 20px;
+    padding: 0 20px;
+}
+
+.parte1 .box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.parte1 h2 {
+    padding-top: 200px;
+    margin: 0 auto;
+}
+
+
+/*-----parte 2-----*/
+
+.parte2 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+audio {
+    padding: 100px 0;
+    width: 80%;
+}
+
+
+/*-----parte 3-----*/
+
+.parte3 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.parte3 h2 {
+    padding: 50px 0;
+}
+
+.gallery {
+    padding: 100px 0;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.wr {
+    flex-direction: row-reverse;
+}
+
+.box .text {
+    max-width: 480px;
+}
+
+.text * {
+    text-align: left;
+}
+
+.text h2 {
+    padding: 20px 0;
+}
+
+.box img {
+    max-width: 400px;
+}
+
+
+/*-----JavaScript----*/
+
+.js-scroll {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+    transition: .5s;
+}
+
+.ativo {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        margin: 0px 50px;
+    }
+    .box {
+        justify-content: center;
+        padding: 50px 0px;
+    }
+    .box * {
+        text-align: center;
+    }
+    .box img {
+        max-width: 100%;
+        padding: 50px 0;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .container {
+        margin: 0px auto;
+    }
+    .box {
+        justify-content: space-around;
+        padding: 0px 0px;
+    }
+    .box * {
+        text-align: left;
+    }
+    .box img {
+        max-width: 400px;
+        padding: 50px 0;
+    }
+}
+
+.footer {
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    background-color: rgb(157, 157, 255);
+}
