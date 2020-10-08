@@ -58,7 +58,6 @@ h4 {
 .menu_lateral ul {
     height: 240px;
     align-self: center;
-    padding-left: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -66,6 +65,7 @@ h4 {
 
 .menu_lateral ul li {
     list-style: none;
+    padding-left: 30px;
 }
 
 .menu_lateral a {
@@ -192,6 +192,26 @@ audio {
 
 
 /*-----JavaScript----*/
+
+sub {
+    opacity: 0;
+    height: 0;
+    position: absolute;
+}
+
+.extend {
+    background-color: rgb(216, 216, 216);
+    min-width: 10px;
+    height: 60px;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.extend a {
+    color: white;
+}
 
 .js-scroll {
     opacity: 0;

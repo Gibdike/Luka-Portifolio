@@ -9,7 +9,32 @@ function insereLi(i, position) {
 
     newA.appendChild(newText); //colocar o texto no <a>
     newLi.appendChild(newA); //e o <a> dentro do <li>
+    newLi.classList.add('oi');
     position.appendChild(newLi);
+}
+
+function extend() {
+    const lizinha = document.querySelectorAll(".oi");
+    const menu = document.querySelectorAll('.s');
+    console.log(menu);
+    for (let index = 0; index < lizinha.length; index++) {
+        lizinha[index].addEventListener("mouseover", mouseOver);
+        lizinha[index].addEventListener("mouseout", mouseOut);
+        const text = menu[index].getAttribute('sub');
+        const newText = document.createTextNode(' -' + ' ' + text);
+
+
+        function mouseOver() {
+            lizinha[index].classList.add("extend");
+            lizinha[index].querySelector("a").appendChild(newText);
+
+        }
+
+        function mouseOut() {
+            lizinha[index].classList.remove("extend");
+            lizinha[index].querySelector("a").removeChild(newText);
+        }
+    }
 }
 
 
@@ -43,20 +68,19 @@ function initAnimacaoScroll() {
 
         function bar() {
             const ativo1 = document.querySelectorAll('.ativo', '.s');
-            console.log('ativo');
-            console.log(ativo1);
             const barra = document.querySelector('#mark');
             var heig = 240 / cont;
             barra.style.setProperty("height", heig);
             var dist = ((ativo1.length * heig) - heig);
             barra.style.height = heig;
-            console.log(dist);
+
             if (dist >= 240) {
                 dist = 240 - heig;
             }
-            console.log(dist);
+
             barra.style.setProperty("top", dist);
         }
+        extend();
         animaScroll();
         window.addEventListener('scroll', animaScroll);
     }
